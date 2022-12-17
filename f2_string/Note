@@ -1,0 +1,65 @@
+/** String Format
+     * %c - Character
+     * %d - Decimal number (base 10)
+     * %e - Exponential floating-point number
+     * %f - Floating-point number
+     * %i - Integer (base 10)
+     * %o - Octal number (base 8)
+     * %s - String
+     * %u - Unsigned decimal (integer) number
+     * %x - Hexadecimal number (base 16)
+     * %t - Date/time
+     * %n - Newline
+     */
+
+    /** Operator Overloading
+     *  OO -> We can change(overload) the +,-,*.. to perform our own operation
+     *  like change + to perform * function, or
+     *  we can do different operation using overloading of operators
+     *
+     *  Java doesn't support operator overloading
+     *  In Java, '+' only operator intentionally overloaded to perform String Concatenation or joining
+     *
+     */
+
+    /** Comparator of Strings
+     * 1 -> ==  -> check values as well as object
+     * 2 -> equals  -> check only values
+     * String name = "TED" ;
+     * String surname = "TED" ;
+     * String lastname = "TED" ;   all those values are stored in string pool.
+     * 1 ->  if (name == surname) is true. is will check value as well as it is pointing to same object.
+     * String firstname = new String("TED");
+     * 2 -> if(names == firstname) is false. its of different object
+     * 3 -> if(names.equals(firstname)) is true, it will check only value
+     */
+
+    /** String Pool
+     * SP -> is separate memory structure in a heap.
+     * Use -> All the similar values of string are stored in String Pool.
+     * String name = "TED" ;
+     * String surname = "TED" ;
+     * String lastname = "TED" ;   all those values are stored in string pool.
+     * 1 ->  if (name == surname) is true. is will check value as well as it is pointing to same object.
+     * String firstname = new String("TED");
+     * 2 -> if(names == firstname) is false. it of different object
+     * 3 -> if(names.equals(firstname)) is true, it will check only value
+     */
+
+    /** Immutable
+     * String name = "TED" ;
+     * String surname = "TED" ;
+     * String lastname = "TED" ;
+     * here all this reference are pointing to same object("TED"),
+     * if we change any of this reference will not change the others, because strings are immutable
+     */
+
+     /** String Builder
+          in this case , new object is created for every cycle and
+          the old value is added with new object.
+          Due to immutability we can't change old string,
+          For that we create a new string(object) and added to it, for 26 letter, a+ab+abs+.. 1+2+3 ..26 object created
+          so much memory wastage happen, and it has no reference variable, Complexity of sumOfN = N(N^2)/2 = N^2.
+          So, it's better to use Stringbuilder class and append func
+          in this case, values are appended it to same object and same reference varible
+     */
